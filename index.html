@@ -5,67 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DogSui | The Next 100x Gem & Gaming Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { background: radial-gradient(circle, #001e3c 0%, #000a12 100%); color: white; font-family: 'Inter', sans-serif; }
         .dog-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s; }
         .dog-card:hover { transform: translateY(-5px); border-color: #00a2ff; }
-        .sui-button { background: linear-gradient(90deg, #00a2ff, #0055ff); box-shadow: 0 4px 15px rgba(0, 162, 255, 0.4); }
+        
+        .btn-primary { background: linear-gradient(90deg, #00a2ff, #0055ff); box-shadow: 0 4px 15px rgba(0, 162, 255, 0.4); transition: 0.3s; }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0, 162, 255, 0.6); }
+        
+        .btn-secondary { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.3s; }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.2); }
+
         .roadmap-item { border-left: 3px solid #00a2ff; padding-left: 20px; position: relative; }
         .highlight { color: #00a2ff; font-weight: bold; }
-        .target-box { background: rgba(0, 162, 255, 0.1); border: 1px dashed #00a2ff; padding: 15px; border-radius: 15px; }
+        .target-box { background: rgba(0, 162, 255, 0.1); border: 1px dashed #00a2ff; padding: 20px; border-radius: 15px; }
     </style>
 </head>
 <body class="flex flex-col items-center min-h-screen p-6">
 
-    <div class="text-center mt-10 mb-16">
-        <h1 class="text-6xl font-extrabold mb-4 tracking-tighter italic">DOG<span class="text-[#00a2ff]">SUI</span></h1>
-        <p class="text-xl text-gray-300 max-w-2xl">
-            Beyond the meme. $DOGSUI is a community-driven ecosystem building real utility through decentralized gaming on the Sui Network.
+    <div class="fixed top-6 right-6 flex gap-4">
+        <a href="#" class="btn-secondary p-3 rounded-full"><i class="fab fa-x-twitter text-xl"></i></a>
+        <a href="#" class="btn-secondary p-3 rounded-full"><i class="fab fa-telegram text-xl"></i></a>
+    </div>
+
+    <div class="text-center mt-16 mb-12">
+        <h1 class="text-7xl font-extrabold mb-4 tracking-tighter italic">DOG<span class="text-[#00a2ff]">SUI</span></h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            The ultimate gaming ecosystem on SUI Network. Real utility, locked security, and a community-driven moonshot.
         </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full mb-16">
+    <div class="flex flex-wrap justify-center gap-4 mb-20 w-full max-w-4xl">
+        <a href="https://sui-defenderzavarize.vercel.app/" class="btn-primary px-8 py-4 rounded-2xl font-black text-xl flex items-center gap-2">
+            <i class="fas fa-gamepad"></i> PLAY SUI DEFENDER
+        </a>
+        <a href="#" class="btn-secondary px-8 py-4 rounded-2xl font-bold text-xl opacity-50 cursor-not-allowed flex items-center gap-2">
+            <i class="fas fa-clock"></i> NEW GAMES SOON
+        </a>
+        <a href="#" class="btn-primary bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 rounded-2xl font-black text-xl flex items-center gap-2">
+            <i class="fas fa-shopping-cart"></i> BUY $DOGSUI
+        </a>
+        <a href="#" class="btn-secondary px-8 py-4 rounded-2xl font-bold text-xl flex items-center gap-2">
+            <i class="fas fa-chart-line"></i> VIEW CHART
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full mb-20">
         <div class="dog-card p-8 rounded-3xl text-center">
-            <div class="text-4xl mb-4">🛡️</div>
-            <h3 class="text-xl font-bold mb-2">Renounced</h3>
-            <p class="text-gray-400">Contract renounced. Full ownership belongs to the community.</p>
+            <div class="text-4xl mb-4 text-[#00a2ff]">🛡️</div>
+            <h3 class="text-xl font-bold mb-2 uppercase">Contract Renounced</h3>
+            <p class="text-gray-400">Ownership sent to dead address. Community is in charge.</p>
         </div>
         <div class="dog-card p-8 rounded-3xl text-center">
-            <div class="text-4xl mb-4">🔥</div>
-            <h3 class="text-xl font-bold mb-2">100% Burned</h3>
-            <p class="text-gray-400">Initial liquidity burned forever. Your investment is safe.</p>
+            <div class="text-4xl mb-4 text-[#00a2ff]">🔥</div>
+            <h3 class="text-xl font-bold mb-2 uppercase">Liquidity Burned</h3>
+            <p class="text-gray-400">100% of LP tokens burned forever. Secure investment.</p>
         </div>
         <div class="dog-card p-8 rounded-3xl text-center">
-            <div class="text-4xl mb-4">🎮</div>
-            <h3 class="text-xl font-bold mb-2">Gaming Utility</h3>
-            <p class="text-gray-400">Not just a coin. We build games to create real value for $DOGSUI.</p>
+            <div class="text-4xl mb-4 text-[#00a2ff]">🕹️</div>
+            <h3 class="text-xl font-bold mb-2 uppercase">Utility Ecosystem</h3>
+            <p class="text-gray-400">We build games that burn supply and reward holders.</p>
         </div>
     </div>
 
-    <div class="max-w-4xl w-full mb-20">
-        <h2 class="text-3xl font-bold mb-10 text-center uppercase tracking-widest text-[#00a2ff]">Phase 1: Strategic Launch</h2>
+    <div class="max-w-4xl w-full mb-24">
+        <h2 class="text-4xl font-black mb-12 text-center uppercase tracking-widest text-[#00a2ff]">Strategic Roadmap</h2>
         
-        <div class="space-y-8">
+        <div class="space-y-10">
             <div class="roadmap-item">
-                <h3 class="text-2xl font-bold text-white">Security & Fair Launch</h3>
-                <p class="text-gray-300 mt-2 italic">Contract Renounced and Liquidity Burned at launch for 100% Transparency.</p>
+                <h3 class="text-2xl font-bold">Phase 1: Stealth Launch & Security</h3>
+                <p class="text-gray-300 mt-2 italic">100% Transparency. Security audit and community takeover.</p>
             </div>
             
             <div class="roadmap-item">
-                <h3 class="text-2xl font-bold text-white uppercase italic text-[#00a2ff]">🚀 First Week Milestone</h3>
-                <div class="target-box mt-2">
-                    <p class="text-white text-lg font-bold">
-                        AGGRESSIVE TARGET: <span class="text-2xl">$500,000 to $1,000,000+ Market Cap</span>
+                <h3 class="text-2xl font-bold text-[#00a2ff] uppercase italic italic">🚀 First Week Milestone</h3>
+                <div class="target-box mt-4">
+                    <p class="text-white text-3xl font-black">
+                        GOAL: $1,000,000+ <span class="text-lg font-normal block">Market Capitalization</span>
                     </p>
-                    <p class="text-gray-300 text-sm mt-1">Our primary goal is to hit the 1 Million mark within the <span class="underline decoration-[#00a2ff]">FIRST 7 DAYS</span> through massive marketing and viral community growth.</p>
+                    <p class="text-gray-300 text-md mt-2">
+                        Our aggressive strategy aims to hit <span class="highlight">1 MILLION USD</span> within the <b>FIRST 7 DAYS</b>. Massive marketing, influencers, and viral gaming utility.
+                    </p>
                 </div>
             </div>
 
             <div class="roadmap-item">
-                <h3 class="text-2xl font-bold text-white">Utility Ecosystem</h3>
+                <h3 class="text-2xl font-bold">Phase 2: Game Expansion</h3>
                 <p class="text-gray-300 mt-2">
-                    Release of <span class="highlight">Sui Defender</span> (V2). $DOGSUI is not a "pump and dump"—it's a gaming hub where the token has real purpose.
+                    Release of <span class="highlight">Sui Defender V2</span> and 2nd game reveal. Partnerships with major SUI protocols.
                 </p>
             </div>
         </div>
     </div>
+
+    <footer class="text-gray-500 text-sm mt-auto pb-10 flex flex-col items-center gap-4">
+        <div class="flex gap-6 mb-4">
+            <a href="#" class="hover:text-white transition-colors text-2xl"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="hover:text-white transition-colors text-2xl"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p>© 2026 DogSui Project | Empowering the SUI Gaming Revolution</p>
+    </footer>
+
+</body>
+</html>
