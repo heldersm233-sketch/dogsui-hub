@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogSui | Official Game Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: radial-gradient(circle, #001e3c 0%, #000a12 100%); color: white; font-family: sans-serif; }
+        .dog-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); transition: all 0.3s ease; border: 1px solid rgba(0, 150, 255, 0.3); }
+        .dog-card:hover { transform: translateY(-10px); border-color: #00a2ff; box-shadow: 0 0 20px rgba(0, 162, 255, 0.4); }
+        .sui-button { background: linear-gradient(90deg, #00a2ff, #0055ff); }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-between min-h-screen p-6 text-white">
+    <div class="text-center mt-10">
+        <h1 class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">DOGSUI</h1>
+        <p class="text-blue-200 mt-2 text-lg font-medium tracking-widest uppercase">The Premier Sui Network Gaming Ecosystem</p>
+    </div>
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+        <div class="dog-card p-8 rounded-3xl text-center">
+            <div class="text-5xl mb-4">🛡️</div>
+            <h2 class="text-3xl font-bold mb-2">Sui Defender</h2>
+            <p class="text-blue-100/60 mb-8">Protect the DogSui treasure in this classic coin wall challenge.</p>
+            <a href="https://dogsui-zavarize.vercel.app" target="_blank" class="sui-button px-10 py-4 rounded-full font-black text-white shadow-lg hover:brightness-110 inline-block">PLAY NOW</a>
+        </div>
+        <div class="dog-card p-8 rounded-3xl text-center opacity-50 border-dashed">
+            <div class="text-5xl mb-4 text-gray-500">🦴</div>
+            <h2 class="text-3xl font-bold mb-2 text-gray-500">Dog Run</h2>
+            <p class="text-gray-500 mb-8">Under development. Stay tuned for the drop.</p>
+            <button disabled class="bg-gray-800 px-10 py-4 rounded-full font-black text-gray-500 italic">LOCKED</button>
+        </div>
+    </main>
+    <footer class="mb-10 w-full max-w-md bg-white/5 p-6 rounded-2xl flex justify-around items-center border border-white/10 text-center">
+        <a href="https://x.com/DOGSUI_OFFICIAL" target="_blank" class="flex flex-col items-center">
+            <span class="text-4xl">𝕏</span>
+            <span class="text-xs text-blue-300 mt-1 uppercase font-bold italic text-center">Follow on X</span>
+        </a>
+    </footer>
+</body>
+</html>
