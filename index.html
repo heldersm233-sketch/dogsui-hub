@@ -7,88 +7,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background: radial-gradient(circle, #001e3c 0%, #000a12 100%); color: white; font-family: 'Inter', sans-serif; }
-        .dog-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); transition: all 0.3s ease; border: 1px solid rgba(0, 150, 255, 0.3); }
+        .dog-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s; }
         .dog-card:hover { transform: translateY(-5px); border-color: #00a2ff; }
-        .sui-button { background: linear-gradient(90deg, #00a2ff, #0055ff); }
-        .roadmap-item { border-left: 3px solid #00a2ff; padding-left: 20px; margin-bottom: 25px; position: relative; }
-        .roadmap-item::before { content: ''; position: absolute; left: -10px; top: 0; width: 16px; height: 16px; background: #00a2ff; border-radius: 50%; }
+        .sui-button { background: linear-gradient(90deg, #00a2ff, #0055ff); box-shadow: 0 4px 15px rgba(0, 162, 255, 0.4); }
+        .roadmap-item { border-left: 3px solid #00a2ff; padding-left: 20px; position: relative; }
         .highlight { color: #00a2ff; font-weight: bold; }
+        .target-box { background: rgba(0, 162, 255, 0.1); border: 1px dashed #00a2ff; padding: 15px; border-radius: 15px; }
     </style>
 </head>
-<body class="flex flex-col items-center min-h-screen p-6 text-white">
+<body class="flex flex-col items-center min-h-screen p-6">
 
     <div class="text-center mt-10 mb-16">
-        <div class="bg-blue-600/20 border border-blue-500/50 inline-block px-4 py-2 rounded-full mb-6 text-blue-300 font-bold animate-pulse">
-            🚀 Missed $PEPE, $BONK or $SHIBA? Don't blink now!
-        </div>
-        <h1 class="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 uppercase tracking-tighter italic">DOGSUI</h1>
-        <p class="text-2xl mt-4 font-bold text-white uppercase tracking-widest">
-            Your <span class="text-yellow-400">100X chance</span> is here!
+        <h1 class="text-6xl font-extrabold mb-4 tracking-tighter italic">DOG<span class="text-[#00a2ff]">SUI</span></h1>
+        <p class="text-xl text-gray-300 max-w-2xl">
+            Beyond the meme. $DOGSUI is a community-driven ecosystem building real utility through decentralized gaming on the Sui Network.
         </p>
     </div>
 
-    <section class="w-full max-w-4xl mb-20">
-        <h2 class="text-3xl font-black mb-8 text-center text-blue-400 uppercase tracking-widest">The "Pinga" Legend 🐾🥃</h2>
-        <div class="dog-card p-10 rounded-3xl text-lg leading-relaxed">
-            <p class="mb-4">
-                Born in the chaotic waves of the Sui Network, <span class="highlight">DogSui</span> isn't here for the ego. He's a humble street dog who just wanted one thing: enough profit for the weekend's <span class="highlight">"Pinga"</span> (the legendary Brazilian party drink).
-            </p>
-            <p class="mb-4 text-blue-100 italic">
-                "While whales play with your money, we build games to buy the next round."
-            </p>
-            <p class="mb-4">
-                Our mission is simple: Creating a <span class="highlight">Gaming Empire</span> on Sui. We turn your small change into party money. From arcade classics to high-stakes defense, we are here for the fun, the community, and the massive gains.
-            </p>
-            <p class="italic text-blue-200">
-                Join the pack, play the games, and let's secure that 100x together.
-            </p>
-        </div>
-    </section>
-
-    <h2 class="text-3xl font-black mb-10 text-center text-blue-400 uppercase tracking-widest text-center">The Arcade</h2>
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mb-20 text-center">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full mb-16">
         <div class="dog-card p-8 rounded-3xl text-center">
-            <div class="text-5xl mb-4 text-blue-400">🛡️</div>
-            <h3 class="text-2xl font-bold mb-2 uppercase">SUI DEFENDER</h3>
-            <p class="text-blue-100/60 mb-8 italic">Protect the barrels. Save the Pinga.</p>
-            <a href="https://sui-defenderzavarize.vercel.app" target="_blank" class="sui-button px-10 py-4 rounded-full font-black text-white shadow-lg hover:brightness-110 inline-block uppercase">PLAY NOW</a>
+            <div class="text-4xl mb-4">🛡️</div>
+            <h3 class="text-xl font-bold mb-2">Renounced</h3>
+            <p class="text-gray-400">Contract renounced. Full ownership belongs to the community.</p>
         </div>
-        <div class="dog-card p-8 rounded-3xl text-center opacity-50 border-dashed">
-            <div class="text-5xl mb-4">🎮</div>
-            <h3 class="text-2xl font-bold mb-2 uppercase">NEXT GAME</h3>
-            <p class="text-gray-500 mb-8 italic">Brewing in the lab...</p>
+        <div class="dog-card p-8 rounded-3xl text-center">
+            <div class="text-4xl mb-4">🔥</div>
+            <h3 class="text-xl font-bold mb-2">100% Burned</h3>
+            <p class="text-gray-400">Initial liquidity burned forever. Your investment is safe.</p>
         </div>
-    </main>
+        <div class="dog-card p-8 rounded-3xl text-center">
+            <div class="text-4xl mb-4">🎮</div>
+            <h3 class="text-xl font-bold mb-2">Gaming Utility</h3>
+            <p class="text-gray-400">Not just a coin. We build games to create real value for $DOGSUI.</p>
+        </div>
+    </div>
 
-    <section class="w-full max-w-3xl mb-20">
-        <h2 class="text-3xl font-black mb-10 text-center text-blue-400 uppercase tracking-widest text-center">Roadmap to the Moon</h2>
-        <div class="dog-card p-10 rounded-3xl">
+    <div class="max-w-4xl w-full mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-center uppercase tracking-widest text-[#00a2ff]">Phase 1: Strategic Launch</h2>
+        
+        <div class="space-y-8">
             <div class="roadmap-item">
-                <h4 class="text-xl font-bold text-blue-300">Phase 1: Bar Opening</h4>
-                <p class="text-blue-100/70">Game Hub & Sui Defender launch. Viral meme marketing starts now.</p>
+                <h3 class="text-2xl font-bold text-white">Security & Fair Launch</h3>
+                <p class="text-gray-300 mt-2 italic">Contract Renounced and Liquidity Burned at launch for 100% Transparency.</p>
             </div>
+            
             <div class="roadmap-item">
-                <h4 class="text-xl font-bold text-blue-300">Phase 2: The 1,000 Pack</h4>
-                <p class="text-blue-100/70">Target: 1,000 X Followers. Community-led raids and contests.</p>
+                <h3 class="text-2xl font-bold text-white uppercase italic text-[#00a2ff]">🚀 First Week Milestone</h3>
+                <div class="target-box mt-2">
+                    <p class="text-white text-lg font-bold">
+                        AGGRESSIVE TARGET: <span class="text-2xl">$500,000 to $1,000,000+ Market Cap</span>
+                    </p>
+                    <p class="text-gray-300 text-sm mt-1">Our primary goal is to hit the 1 Million mark within the <span class="underline decoration-[#00a2ff]">FIRST 7 DAYS</span> through massive marketing and viral community growth.</p>
+                </div>
             </div>
+
             <div class="roadmap-item">
-                <h4 class="text-xl font-bold text-yellow-400 underline">Phase 3: The $DOGSUI Token Splash</h4>
-                <p class="text-blue-100/70">Official Token Launch (in 2 months). The 100x mission begins! Liquidity Locked.</p>
-            </div>
-            <div class="roadmap-item">
-                <h4 class="text-xl font-bold text-cyan-400">Phase 4: CEX Listing & Beyond</h4>
-                <p class="text-blue-100/70">Applying for Exchange listings. Expanding the Game Hub with more original titles.</p>
+                <h3 class="text-2xl font-bold text-white">Utility Ecosystem</h3>
+                <p class="text-gray-300 mt-2">
+                    Release of <span class="highlight">Sui Defender</span> (V2). $DOGSUI is not a "pump and dump"—it's a gaming hub where the token has real purpose.
+                </p>
             </div>
         </div>
-    </section>
-
-    <footer class="mb-10 w-full max-w-md bg-white/5 p-8 rounded-2xl flex flex-col items-center border border-white/10 text-center">
-        <a href="https://x.com/DOGSUI_OFFICIAL" target="_blank" class="flex flex-col items-center hover:scale-110 transition-transform">
-            <span class="text-6xl text-white">𝕏</span>
-            <span class="text-xs text-blue-400 mt-3 font-black uppercase italic tracking-widest">Follow us on X</span>
-        </a>
-    </footer>
-
-</body>
-</html>
-
+    </div>
