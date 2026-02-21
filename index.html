@@ -3,107 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DogSui | The 100x Gaming Gem</title>
+    <title>DogSui | The Cyber Legend of SUI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { background: radial-gradient(circle, #001e3c 0%, #000a12 100%); color: white; font-family: 'Inter', sans-serif; }
-        .dog-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; transition: all 0.3s ease; }
-        .dog-card:hover { transform: translateY(-5px); border-color: #00a2ff; }
-        .btn-primary { background: linear-gradient(90deg, #00a2ff, #0055ff); box-shadow: 0 4px 15px rgba(0, 162, 255, 0.3); transition: all 0.3s ease; }
-        .btn-primary:hover { transform: scale(1.05); }
-        .btn-secondary { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .roadmap-item { border-left: 3px solid #00a2ff; padding-left: 20px; position: relative; }
-        .highlight { color: #00a2ff; font-weight: bold; }
-        .pinga-box { border: 1px solid #ffaa00; background: rgba(255, 170, 0, 0.1); padding: 20px; border-radius: 15px; }
+        :root { --sui-blue: #00a2ff; --sui-dark: #000a12; --sui-glow: rgba(0, 162, 255, 0.5); }
         
-        /* Animação para a logo */
+        body { 
+            background: radial-gradient(circle at top, #001e3c 0%, #000a12 100%); 
+            color: white; 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .orbitron { font-family: 'Orbitron', sans-serif; }
+
+        /* Vidro Morphismo Avançado */
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(15px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* Animação da Logo e Brilho */
         .logo-header {
             width: 100%;
-            max-width: 450px;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 162, 255, 0.5);
-            border: 1px solid #00a2ff;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
+            max-width: 500px;
+            filter: drop-shadow(0 0 30px var(--sui-glow));
+            animation: float 5s ease-in-out infinite;
+            border-radius: 20px;
         }
-        .logo-header:hover { transform: scale(1.02); }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
+        }
+
+        .btn-premium {
+            background: linear-gradient(90deg, #00a2ff, #0055ff);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 30px var(--sui-glow);
+        }
+
+        .roadmap-card {
+            border-left: 4px solid var(--sui-blue);
+            background: linear-gradient(90deg, rgba(0, 162, 255, 0.1), transparent);
+            padding: 2rem;
+            border-radius: 0 20px 20px 0;
+            margin-bottom: 2rem;
+        }
+
+        .highlight-gold { color: #ffaa00; text-shadow: 0 0 10px rgba(255, 170, 0, 0.5); }
+        
+        /* Scanline Effect */
+        body::before {
+            content: " ";
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 4px, 3px 100%;
+            z-index: 100;
+            pointer-events: none;
+            opacity: 0.3;
+        }
     </style>
 </head>
-<body class="flex flex-col items-center min-h-screen p-6"> 
+<body class="flex flex-col items-center min-h-screen p-4 md:p-8">
 
-    <div class="flex justify-center w-full">
-        <img src="logooficialdogsui.png" alt="DogSui Logo" class="logo-header">
+    <div class="fixed top-6 right-6 flex gap-3 z-50">
+        <a href="#" class="glass-panel p-4 rounded-full hover:text-[#00a2ff] transition-all"><i class="fab fa-twitter text-xl"></i></a>
+        <a href="#" class="glass-panel p-4 rounded-full hover:text-[#00a2ff] transition-all"><i class="fab fa-telegram text-xl"></i></a>
     </div>
 
-    <div class="fixed top-6 right-6 flex gap-4">
-        <a href="#" class="btn-secondary p-3 rounded-full hover:text-[#00a2ff] transition-colors"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="btn-secondary p-3 rounded-full hover:text-[#00a2ff] transition-colors"><i class="fab fa-telegram"></i></a>
-    </div>
-
-    <div class="text-center mt-16 mb-10">
-        <h1 class="text-7xl font-black mb-4 italic tracking-tighter">DOG<span class="text-[#00a2ff]">SUI</span></h1>
-        <p class="text-2xl font-bold text-[#00a2ff] uppercase tracking-widest">Don't miss the next 100x</p>
-    </div>
-
-    <div class="max-w-3xl w-full mb-12 space-y-6 text-center">
-        <div class="pinga-box">
-            <h3 class="text-[#ffaa00] font-bold text-xl mb-2">🍺 THE "PINGA" PHILOSOPHY</h3>
-            <p class="text-gray-200">
-                Missed <b>PEPE, BONK or SHIBA</b>? This is your chance. We don't want your life savings—just your "pinga" money (the spare change). Small entries, massive potential. 
-            </p>
-        </div>
-        <p class="text-lg text-gray-300">
-            $DOGSUI is not just another useless meme. We are creating a <b>Real Gaming Utility</b> ecosystem on the SUI Network. We build, we play, we defend the chart.
-        </p>
-    </div>
-
-    <div class="flex flex-wrap justify-center gap-4 mb-20">
-        <a href="https://dogsui-defender.vercel.app/" class="btn-primary px-10 py-4 rounded-2xl font-black text-xl flex items-center gap-2">
-            <i class="fas fa-gamepad"></i> PLAY SUI DEFENDER
-        </a>
-        <a href="#" class="btn-primary bg-gradient-to-r from-green-500 to-emerald-600 px-10 py-4 rounded-2xl font-black text-xl flex items-center gap-2">
-            <i class="fas fa-shopping-cart"></i> BUY $DOGSUI
-        </a>
-        <a href="#" class="btn-secondary px-10 py-4 rounded-2xl font-bold text-xl flex items-center gap-2">
-            <i class="fas fa-chart-line"></i> VIEW CHART
-        </a>
-    </div>
-
-    <div class="max-w-4xl w-full mb-24 bg-black/30 p-10 rounded-3xl border border-white/5">
-        <h2 class="text-4xl font-black mb-12 text-center text-[#00a2ff]">THE BATTLE PLAN (ROADMAP)</h2>
+    <header class="flex flex-col items-center mt-10 mb-20 w-full max-w-6xl text-center">
+        <img src="logooficialdogsui.png" alt="DogSui" class="logo-header mb-12">
         
-        <div class="space-y-12">
-            <div class="roadmap-item">
-                <h3 class="text-2xl font-bold uppercase">Phase 1: Recruitment</h3>
-                <p class="text-gray-300 mt-2">
-                    • Goal: <span class="highlight">1,000+ Followers</span> on X/Telegram.<br>
-                    • Launch Date: <span class="highlight">By May 15th, 2026</span> (or sooner).<br>
-                    • Security: Contract <span class="highlight">Renounced</span> & Liquidity <span class="highlight">100% Burned</span>.
+        <h1 class="orbitron text-6xl md:text-9xl font-black mb-4 tracking-tighter italic">
+            DOG<span class="text-[#00a2ff]">SUI</span>
+        </h1>
+        <p class="orbitron text-xl md:text-3xl font-bold tracking-[0.3em] text-[#00a2ff] opacity-80 uppercase">
+            The Cyber Guardian of SUI Network
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-6 mt-12 w-full">
+            <a href="https://dogsui-defender.vercel.app/" class="btn-premium px-10 py-5 rounded-2xl font-black text-2xl flex items-center gap-3">
+                <i class="fas fa-crosshairs"></i> PLAY DEFENDER
+            </a>
+            <a href="#" class="glass-panel border-green-500/30 px-10 py-5 rounded-2xl font-black text-2xl flex items-center gap-3 hover:bg-green-500/10 transition-all">
+                <i class="fas fa-coins text-green-500"></i> BUY $DOGSUI
+            </a>
+        </div>
+    </header>
+
+    <section class="max-w-5xl w-full mb-32 relative">
+        <div class="glass-panel p-8 md:p-16 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl orbitron font-black">STORY</div>
+            <h2 class="orbitron text-4xl font-black mb-8 highlight-gold italic">THE LEGEND OF DOGSUI</h2>
+            <div class="grid md:grid-cols-2 gap-10 text-lg text-gray-300 leading-relaxed">
+                <p>
+                    Em um multiverso de blockchains lentas e taxas abusivas, nasceu o <span class="text-white font-bold">DogSui</span>. Ele não é apenas um mascote; ele é a resposta cibernética à ineficiência. Criado com a tecnologia <span class="text-[#00a2ff] font-bold">Move</span>, ele patrulha os blocos da SUI Network em milissegundos.
+                </p>
+                <p>
+                    Diferente dos cães comuns, o DogSui se alimenta de FUD e queima tokens enquanto dorme. Ele veio para unir a comunidade que busca o próximo <span class="highlight-gold">100x</span> com a utilidade real de um ecossistema de games onde apenas os fortes sobrevivem.
                 </p>
             </div>
             
-            <div class="roadmap-item border-l-4 border-yellow-500">
-                <h3 class="text-2xl font-bold text-yellow-500 uppercase italic">🚀 The $1M Sprint</h3>
-                <p class="text-white text-xl mt-2 font-bold">
-                    Target: $1,000,000 Market Cap within the FIRST WEEK.
-                </p>
-                <p class="text-gray-400 italic text-sm">Aggressive marketing, gaming tournaments, and viral growth.</p>
-            </div>
-
-            <div class="roadmap-item">
-                <h3 class="text-2xl font-bold uppercase">Phase 3: Domination</h3>
-                <p class="text-gray-300 mt-2">
-                    • Dominating <span class="highlight">DEX</span> (BlueMove/Cetus).<br>
-                    • Applying for <span class="highlight">CEX</span> Listings.<br>
-                    • More games, more utility, more burns.
+            <div class="mt-12 bg-[#ffaa00]/10 border border-[#ffaa00]/30 p-8 rounded-2xl">
+                <h3 class="highlight-gold font-black text-2xl mb-2 italic">🍺 THE "PINGA" PHILOSOPHY</h3>
+                <p class="text-gray-200 text-lg">
+                    Perdeu <b>PEPE, BONK ou SHIBA</b>? Esta é sua redenção. Não pedimos suas economias de uma vida — apenas o "dinheiro da pinga". Entradas pequenas, potencial explosivo.
                 </p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="text-gray-500 text-sm pb-10">
-        © 2026 DogSui Project | Don't invest more than you can afford to lose.
+    <section class="max-w-4xl w-full mb-32">
+        <h2 class="orbitron text-5xl font-black mb-16 text-center tracking-tighter italic">BATTLE <span class="text-[#00a2ff]">PLAN</span></h2>
+        
+        <div class="space-y-8">
+            <div class="roadmap-card">
+                <span class="text-xs orbitron text-[#00a2ff] font-bold">PHASE 01</span>
+                <h3 class="text-3xl font-black uppercase mb-2">Recruitment & Deployment</h3>
+                <p class="text-gray-400">1,000+ Followers • Launch by May 15th • 100% LP Burned & Contract Renounced.</p>
+            </div>
+
+            <div class="roadmap-card border-[#ffaa00] bg-yellow-500/5">
+                <span class="text-xs orbitron text-[#ffaa00] font-bold">PHASE 02</span>
+                <h3 class="text-4xl font-black text-[#ffaa00] uppercase mb-2">🚀 THE $1M SPRINT</h3>
+                <p class="text-white text-xl font-bold italic">Target: $1,000,000 Market Cap na primeira semana.</p>
+                <p class="text-gray-400 text-sm mt-2 font-light">Marketing agressivo, torneios semanais de Sui Defender e invasão global.</p>
+            </div>
+
+            <div class="roadmap-card">
+                <span class="text-xs orbitron text-[#00a2ff] font-bold">PHASE 03</span>
+                <h3 class="text-3xl font-black uppercase mb-2">Total Domination</h3>
+                <p class="text-gray-400">Listagem em CEX • Ecossistema Multi-Game • Queimas Massivas e Governança.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full text-center border-t border-white/5 pt-12 pb-20 text-gray-600">
+        <p class="orbitron text-sm mb-4">DOGSUI &copy; 2026 - THE WARRIORS OF SUI</p>
+        <p class="max-w-xs mx-auto text-xs opacity-50">Investir em memecoins envolve alto risco. Jogue e invista com inteligência.</p>
     </footer>
 
 </body>
