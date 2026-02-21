@@ -3,159 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DogSui | The Cyber Legend of SUI</title>
+    <title>DogSui | The Cyber Dev of SUI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --sui-blue: #00a2ff; --sui-dark: #000a12; --sui-glow: rgba(0, 162, 255, 0.5); }
-        
-        body { 
-            background: radial-gradient(circle at top, #001e3c 0%, #000a12 100%); 
-            color: white; 
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
+        :root { --sui-blue: #00a2ff; --sui-glow: rgba(0, 162, 255, 0.4); }
+        body { background: radial-gradient(circle at top, #001e3c 0%, #000a12 100%); color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .orbitron { font-family: 'Orbitron', sans-serif; }
-
-        /* Vidro Morphismo Avançado */
-        .glass-panel { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(15px); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            border-radius: 30px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        /* Animação da Logo e Brilho */
-        .logo-header {
-            width: 100%;
-            max-width: 500px;
-            filter: drop-shadow(0 0 30px var(--sui-glow));
-            animation: float 5s ease-in-out infinite;
-            border-radius: 20px;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.02); }
-        }
-
-        .btn-premium {
-            background: linear-gradient(90deg, #00a2ff, #0055ff);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-premium:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 0 30px var(--sui-glow);
-        }
-
-        .roadmap-card {
-            border-left: 4px solid var(--sui-blue);
-            background: linear-gradient(90deg, rgba(0, 162, 255, 0.1), transparent);
-            padding: 2rem;
-            border-radius: 0 20px 20px 0;
-            margin-bottom: 2rem;
-        }
-
-        .highlight-gold { color: #ffaa00; text-shadow: 0 0 10px rgba(255, 170, 0, 0.5); }
-        
-        /* Scanline Effect */
-        body::before {
-            content: " ";
-            position: fixed;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
-                        linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-            background-size: 100% 4px, 3px 100%;
-            z-index: 100;
-            pointer-events: none;
-            opacity: 0.3;
-        }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 30px; }
+        .logo-header { width: 100%; max-width: 400px; filter: drop-shadow(0 0 30px var(--sui-glow)); animation: float 5s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        .btn-premium { background: linear-gradient(90deg, #00a2ff, #0055ff); transition: 0.3s; box-shadow: 0 5px 15px rgba(0, 162, 255, 0.3); }
+        .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--sui-glow); }
+        .security-tag { background: rgba(0, 255, 150, 0.1); border: 1px solid rgba(0, 255, 150, 0.3); color: #00ff96; padding: 5px 15px; border-radius: 50px; font-size: 0.7rem; font-weight: bold; }
     </style>
 </head>
-<body class="flex flex-col items-center min-h-screen p-4 md:p-8">
+<body class="flex flex-col items-center p-4">
 
     <div class="fixed top-6 right-6 flex gap-3 z-50">
         <a href="#" class="glass-panel p-4 rounded-full hover:text-[#00a2ff] transition-all"><i class="fab fa-twitter text-xl"></i></a>
         <a href="#" class="glass-panel p-4 rounded-full hover:text-[#00a2ff] transition-all"><i class="fab fa-telegram text-xl"></i></a>
     </div>
 
-    <header class="flex flex-col items-center mt-10 mb-20 w-full max-w-6xl text-center">
-        <img src="logooficialdogsui.png" alt="DogSui" class="logo-header mb-12">
+    <header class="flex flex-col items-center mt-10 mb-16 text-center">
+        <img src="logooficialdogsui.png" alt="DogSui" class="logo-header mb-8">
+        <div class="flex gap-4 mb-6">
+            <span class="security-tag"><i class="fas fa-fire"></i> LIQUIDITY BURNED</span>
+            <span class="security-tag"><i class="fas fa-file-contract"></i> RENOUNCED</span>
+        </div>
+        <h1 class="orbitron text-6xl md:text-8xl font-black mb-4 italic tracking-tighter text-white">DOG<span class="text-[#00a2ff]">SUI</span></h1>
+        <p class="orbitron text-lg font-bold tracking-[0.2em] text-[#00a2ff] uppercase mb-10">Coding the Future of Sui Memes</p>
         
-        <h1 class="orbitron text-6xl md:text-9xl font-black mb-4 tracking-tighter italic">
-            DOG<span class="text-[#00a2ff]">SUI</span>
-        </h1>
-        <p class="orbitron text-xl md:text-3xl font-bold tracking-[0.3em] text-[#00a2ff] opacity-80 uppercase">
-            The Cyber Guardian of SUI Network
-        </p>
-
-        <div class="flex flex-wrap justify-center gap-6 mt-12 w-full">
-            <a href="https://dogsui-defender.vercel.app/" class="btn-premium px-10 py-5 rounded-2xl font-black text-2xl flex items-center gap-3">
-                <i class="fas fa-crosshairs"></i> PLAY DEFENDER
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://dogsui-defender.vercel.app/" class="btn-premium px-8 py-4 rounded-xl font-black text-xl flex items-center gap-2">
+                <i class="fas fa-play"></i> PLAY DEFENDER
             </a>
-            <a href="#" class="glass-panel border-green-500/30 px-10 py-5 rounded-2xl font-black text-2xl flex items-center gap-3 hover:bg-green-500/10 transition-all">
-                <i class="fas fa-coins text-green-500"></i> BUY $DOGSUI
-            </a>
+            <a href="#" class="glass-panel px-8 py-4 rounded-xl font-black text-xl hover:bg-white/5 transition-all">BUY $DOGSUI</a>
         </div>
     </header>
 
-    <section class="max-w-5xl w-full mb-32 relative">
-        <div class="glass-panel p-8 md:p-16 relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl orbitron font-black">STORY</div>
-            <h2 class="orbitron text-4xl font-black mb-8 highlight-gold italic">THE LEGEND OF DOGSUI</h2>
-            <div class="grid md:grid-cols-2 gap-10 text-lg text-gray-300 leading-relaxed">
-                <p>
-                    Em um multiverso de blockchains lentas e taxas abusivas, nasceu o <span class="text-white font-bold">DogSui</span>. Ele não é apenas um mascote; ele é a resposta cibernética à ineficiência. Criado com a tecnologia <span class="text-[#00a2ff] font-bold">Move</span>, ele patrulha os blocos da SUI Network em milissegundos.
-                </p>
-                <p>
-                    Diferente dos cães comuns, o DogSui se alimenta de FUD e queima tokens enquanto dorme. Ele veio para unir a comunidade que busca o próximo <span class="highlight-gold">100x</span> com a utilidade real de um ecossistema de games onde apenas os fortes sobrevivem.
-                </p>
+    <section class="max-w-4xl w-full mb-24 text-center glass-panel p-10 bg-red-500/5 border-red-500/10">
+        <h2 class="orbitron text-2xl font-black mb-6 italic uppercase">Perdeu o Trem?</h2>
+        <div class="flex justify-center gap-8 mb-8 opacity-30 grayscale">
+            <span class="text-2xl font-bold line-through">PEPE</span>
+            <span class="text-2xl font-bold line-through">BONK</span>
+            <span class="text-2xl font-bold line-through">SHIBA</span>
+        </div>
+        <p class="text-gray-300 italic text-lg">
+            "Não olhe para o passado. Olhe para a rede SUI. O DogSui chegou para quem cansou de perder o timing."
+        </p>
+    </section>
+
+    <section class="max-w-6xl w-full mb-32">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+                <img src="devdog.png" alt="DogSui Coding" class="rounded-3xl shadow-2xl border border-blue-500/20">
             </div>
-            
-            <div class="mt-12 bg-[#ffaa00]/10 border border-[#ffaa00]/30 p-8 rounded-2xl">
-                <h3 class="highlight-gold font-black text-2xl mb-2 italic">🍺 THE "PINGA" PHILOSOPHY</h3>
-                <p class="text-gray-200 text-lg">
-                    Perdeu <b>PEPE, BONK ou SHIBA</b>? Esta é sua redenção. Não pedimos suas economias de uma vida — apenas o "dinheiro da pinga". Entradas pequenas, potencial explosivo.
+            <div class="space-y-6 text-left">
+                <h2 class="orbitron text-4xl font-black text-[#00a2ff]">THE CYBER LAB</h2>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    DogSui é mais que um meme. Nosso herói é um **Gaming Architect** focado em transformar a Sui Network em um playground lucrativo. Ele codifica, ele constrói, ele defende.
                 </p>
+                <div class="bg-blue-500/10 p-6 rounded-2xl border border-blue-500/20">
+                    <p class="text-sm font-bold"><i class="fas fa-code text-[#00a2ff] mr-2"></i> UTILIDADE DO TOKEN:</p>
+                    <p class="text-gray-400 text-sm mt-1">No Cyber Lab, o $DOGSUI é a chave. Itens exclusivos e recompensas in-game serão vinculados ao nosso ecossistema.</p>
+                </div>
             </div>
         </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-panel p-8 border-[#00a2ff]/30 bg-blue-500/5 text-center">
+                <span class="text-xs font-black text-green-400 uppercase tracking-widest">Live Now</span>
+                <h3 class="orbitron text-2xl font-bold mt-2 mb-4">DOGSUI DEFENDER</h3>
+                <p class="text-gray-400 mb-6">Proteja a rede SUI de ataques hackers e domine o placar.</p>
+                <a href="https://dogsui-defender.vercel.app/" class="btn-premium inline-block px-8 py-3 rounded-lg font-bold">JOGAR AGORA</a>
+            </div>
+            <div class="glass-panel p-8 border-dashed border-gray-700 text-center opacity-70">
+                <span class="text-xs font-black text-blue-400 uppercase tracking-widest italic">In The Lab</span>
+                <h3 class="orbitron text-2xl font-bold mt-2 mb-4">NEW GAME</h3>
+                <p class="text-gray-400 mb-6">O DogSui está compilando algo novo... Aguarde o deploy.</p>
+                <button class="bg-white/10 px-8 py-3 rounded-lg font-bold text-gray-500 cursor-not-allowed italic">COMING SOON</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl w-full mb-32 glass-panel p-10 border-yellow-500/20 bg-yellow-500/5 text-center">
+        <h2 class="orbitron text-3xl font-black text-[#ffaa00] mb-4 italic">🍺 FILOSOFIA DA PINGA</h2>
+        <p class="text-gray-300 text-lg">
+            Sabe aquele troco? Aquele dinheiro que não te faz falta? É o que você precisa. O DogSui é para o povo. Pequenas entradas, sonhos gigantes na rede mais rápida do mundo.
+        </p>
     </section>
 
     <section class="max-w-4xl w-full mb-32">
-        <h2 class="orbitron text-5xl font-black mb-16 text-center tracking-tighter italic">BATTLE <span class="text-[#00a2ff]">PLAN</span></h2>
-        
+        <h2 class="orbitron text-4xl font-black mb-12 text-center italic">BATTLE PLAN</h2>
         <div class="space-y-8">
-            <div class="roadmap-card">
-                <span class="text-xs orbitron text-[#00a2ff] font-bold">PHASE 01</span>
-                <h3 class="text-3xl font-black uppercase mb-2">Recruitment & Deployment</h3>
-                <p class="text-gray-400">1,000+ Followers • Launch by May 15th • 100% LP Burned & Contract Renounced.</p>
+            <div class="border-l-4 border-blue-500 pl-8 relative">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
+                <h4 class="orbitron font-bold text-xl uppercase">Fase 1: Deployment</h4>
+                <p class="text-gray-400">Lançamento, Queima de LP e Mobilização dos Guerreiros.</p>
             </div>
-
-            <div class="roadmap-card border-[#ffaa00] bg-yellow-500/5">
-                <span class="text-xs orbitron text-[#ffaa00] font-bold">PHASE 02</span>
-                <h3 class="text-4xl font-black text-[#ffaa00] uppercase mb-2">🚀 THE $1M SPRINT</h3>
-                <p class="text-white text-xl font-bold italic">Target: $1,000,000 Market Cap na primeira semana.</p>
-                <p class="text-gray-400 text-sm mt-2 font-light">Marketing agressivo, torneios semanais de Sui Defender e invasão global.</p>
+            <div class="border-l-4 border-yellow-500 pl-8 relative">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-yellow-500 rounded-full shadow-[0_0_10px_#ffaa00]"></div>
+                <h4 class="orbitron font-bold text-xl text-yellow-500 uppercase italic text-shadow">Fase 2: $1M Market Cap Sprint</h4>
+                <p class="text-white font-bold italic italic">Meta: 1 Milhão de Market Cap na primeira semana.</p>
             </div>
-
-            <div class="roadmap-card">
-                <span class="text-xs orbitron text-[#00a2ff] font-bold">PHASE 03</span>
-                <h3 class="text-3xl font-black uppercase mb-2">Total Domination</h3>
-                <p class="text-gray-400">Listagem em CEX • Ecossistema Multi-Game • Queimas Massivas e Governança.</p>
+            <div class="border-l-4 border-gray-700 pl-8 relative opacity-50">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gray-700 rounded-full"></div>
+                <h4 class="orbitron font-bold text-xl uppercase">Fase 3: Domination</h4>
+                <p class="text-gray-400">CEX Listings e Ecossistema Multi-Game.</p>
             </div>
         </div>
     </section>
 
-    <footer class="w-full text-center border-t border-white/5 pt-12 pb-20 text-gray-600">
-        <p class="orbitron text-sm mb-4">DOGSUI &copy; 2026 - THE WARRIORS OF SUI</p>
-        <p class="max-w-xs mx-auto text-xs opacity-50">Investir em memecoins envolve alto risco. Jogue e invista com inteligência.</p>
+    <footer class="w-full text-center py-16 border-t border-white/5">
+        <p class="orbitron text-sm text-[#00a2ff] mb-4">DOGSUI | THE WARRIORS OF SUI</p>
+        <div class="text-gray-500 text-xs space-y-2">
+            <p>Contact: <span class="text-white font-bold">dogsuimemecoin@gmail.com</span></p>
+            <p>&copy; 2026 DogSui Project. All rights reserved.</p>
+            <p class="max-w-xs mx-auto opacity-30 italic mt-4">Investir em memecoins exige cautela. Nunca invista o que não pode perder.</p>
+        </div>
     </footer>
 
 </body>
