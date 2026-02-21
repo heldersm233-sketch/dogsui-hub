@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DogSui | The 100x Gaming Gem</title>
@@ -8,26 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { background: radial-gradient(circle, #001e3c 0%, #000a12 100%); color: white; font-family: 'Inter', sans-serif; }
-        .dog-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; transition: all 0.3s ease; }
+        .dog-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s; }
         .dog-card:hover { transform: translateY(-5px); border-color: #00a2ff; }
-        .btn-primary { background: linear-gradient(90deg, #00a2ff, #0055ff); box-shadow: 0 4px 15px rgba(0, 162, 255, 0.3); transition: all 0.3s ease; }
+        .btn-primary { background: linear-gradient(90deg, #00a2ff, #0055ff); box-shadow: 0 4px 15px rgba(0, 162, 255, 0.4); transition: 0.3s; }
         .btn-primary:hover { transform: scale(1.05); }
         .btn-secondary { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); }
         .roadmap-item { border-left: 3px solid #00a2ff; padding-left: 20px; position: relative; }
         .highlight { color: #00a2ff; font-weight: bold; }
         .pinga-box { border: 1px solid #ffaa00; background: rgba(255, 170, 0, 0.1); padding: 20px; border-radius: 15px; }
-        
-        /* Animação para a logo */
-        .logo-header {
-            width: 100%;
-            max-width: 450px;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 162, 255, 0.5);
-            border: 1px solid #00a2ff;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-        }
-        .logo-header:hover { transform: scale(1.02); }
     </style>
 </head>
 <body class="flex flex-col items-center min-h-screen p-6">
